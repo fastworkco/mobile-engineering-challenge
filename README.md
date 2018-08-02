@@ -21,33 +21,56 @@ Here is the layout and description that should be produced:
 
 **Create product list page.**
 
-<img src="product-list-header2.png" width="250">
+<img src="product-list.png" width="960">
 <br/>
-<img src="product-list3.png" width="250">
 
-- Create header, tab bar, taxonomy filters.
-- Filter button can click to show blank popup.
-- Each product list can click to product detail.
-- Product list data can render this api http://www.mocky.io/v2/5b0275b83000007500cee151
+Create header, tab bar, taxonomy filters.
+1. Search bar [text field] (no action).
+2. Filter button (click to show blank popup).
+3. Tab bar sorting (click to change active tab and show alert sorting name).
+4. Tag bar [button group] (have 5 tag can slide and each button tag no action).
+
+Create list item.
+1. Product list (each list click to product detail).
+2. Cover photo [image] (use field `photos[].is_cover_photo = true`)
+3. Profile photo [image] (use field `user.image`), Username (use field: `user.first_name`), Badge and text "online" (alway show).
+4. Favorite button (click to change active stage).
+5. Product title (use field `title` and limit 2 row).
+6. Product price (fix text "฿1000"), Rating (use field `rating`), Number rating (use field `purchase`).
+7. Send message button (no action).
+
+> Product list data get from this api http://www.mocky.io/v2/5b0275b83000007500cee151
 
 <br/>
 
 **Create product detail page.**
 
-<img src="product-detail.png" width="250">
+<img src="product-detail.png" width="960">
+<br/>
 
-- Create layout and fill data.
-- Back button can click to product list.
-- Ignore all action on this page such as click favorites, share, etc.
+Create detail section top
+1. Back button (click to back to product list).
+2. Title (use field `title` and show only 1 row).
+3. More button (no action).
+4. Photo slide (use field `photos[]`, auto slide, swipe and click to show full screen).
+5. Profile photo [image] (use field `user.image`), Username (use field: `user.first_name`), Badge and text "online" (alway show).
+6. Rating (use field `rating`), Number rating (use field `purchase`).
+7. Fix layout and text.
 
-> More detail UI layout can send your questions directly to [burin@fastwork.co](mailto:burin@fastwork.co).
+Create detail section bottom
+1. Product title (use field `title` and limit 2 row).
+2. Product price (fix text "฿1000").
+3. Product description (use field `description`, limit 3 row and can click more button to expand all description).
+4. Fix layout and text.
+5. Shield (no action and use image below).
+6. Not show this icon.
+7. Favorite button (click to change active stage).
+8. Chat and send meassage button (click to show blank popup).
 
-### APIs
+> Product detail data get from same api above
 
-Using our api for get data.
-
-#### [GET] product list and detail
-- http://www.mocky.io/v2/5b0275b83000007500cee151
+<img src="shield.png" width="100">
+<br/>
 
 ### Some tips and remarks
 
